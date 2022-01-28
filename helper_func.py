@@ -43,7 +43,6 @@ async def subschannel2(filter, client, update):
         return False
 
 
-
 async def subsgroup(filter, client, update):
     if not FORCE_SUB_GROUP:
         return True
