@@ -55,8 +55,8 @@ class Bot(Client):
                 sys.exit()
         if FORCE_SUB_CHANNEL2:
             try:
-                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
-                self.invitelink = link
+                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL2)
+                self.invitelink3 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
