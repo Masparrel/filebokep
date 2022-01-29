@@ -109,7 +109,7 @@ class Bot(Client):
         if FORCE_SUB_GROUP:
             try:
                 link = await self.export_chat_invite_link(FORCE_SUB_GROUP)
-                self.invitelink = link
+                self.invitelink2 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
