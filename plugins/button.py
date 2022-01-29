@@ -43,11 +43,14 @@ def start_button(client):
                 InlineKeyboardButton(text="• ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ •", callback_data="about"),
             ],
             [
-                InlineKeyboardButton(text="💢 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 💢", url=client.invitelink),
-                InlineKeyboardButton(text="💢 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 💢", url=client.invitelink),
-                InlineKeyboardButton(text="💢 ᴊᴏɪɴ ɢʀᴏᴜᴘ 💢", url=client.invitelink2),
+                InlineKeyboardButton(text="💢ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ💢", url=client.invitelink),
+                InlineKeyboardButton(text="💢ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ💢", url=client.invitelink),
             ],
-            [InlineKeyboardButton(text="• ❌ ᴛᴜᴛᴜᴘ ❌ •", callback_data="close")],
+            [
+                InlineKeyboardButton(text="💢ᴊᴏɪɴ ɢʀᴏᴜᴘ💢", url=client.invitelink2),
+                InlineKeyboardButton(text="💢ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ💢", url=client.invitelink),
+            ],
+            [InlineKeyboardButton(text="• ᴛᴜᴛᴜᴘ •", callback_data="close")],
         ]
         return buttons
 
