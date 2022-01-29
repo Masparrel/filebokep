@@ -1,6 +1,10 @@
 # (©)Codexbotz
+
 # Recode by @mrismanaziz
+# Featuring by @SilenceSpe4ks
+
 # t.me/SharingUserbot & t.me/Lunatic0de
+
 
 import asyncio
 from datetime import datetime
@@ -11,10 +15,9 @@ from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from bot import Bot
-from .button import fsub_button, start_button
 from config import ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, FORCE_MSG, START_MSG
 from database.sql import add_user, full_userbase, query_msg
-from helper_func import decode, get_messages, subsall, subsch, subsgc
+from helper_func import decode, get_messages, subscribed
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -38,8 +41,8 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Bot.on_message(filters.command("start") & filters.private & subsall & subsch & subsgc)
-async def start_command(client: Bot, message: Message):
+@Bot.on_message(filters.command("start") & filters.private & subscribed)
+async def start_command(client: Client, message: Message):
     id = message.from_user.id
     user_name = "@" + message.from_user.username if message.from_user.username else None
     try:
@@ -79,7 +82,7 @@ async def start_command(client: Bot, message: Message):
         try:
             messages = await get_messages(client, ids)
         except BaseException:
-            await message.reply_text("<b>Telah Terjadi Error </b>🥺")
+            await message.reply_text("<b>Telah Terjadi Error </b>🤨")
             return
         await temp_msg.delete()
 
@@ -113,7 +116,20 @@ async def start_command(client: Bot, message: Message):
             except BaseException:
                 pass
     else:
-        out = start_button(client)
+        buttons = [
+            [InlineKeyboardButton("💬 𝚃𝙴𝙽𝚃𝙰𝙽𝙶 𝚂𝙰𝚈𝙰 💬", callback_data="about")],
+            [
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🔗", url=client.invitelink),
+                InlineKeyboardButton("🔗 𝙶𝚁𝙾𝚄𝙿𝚂 🔗", url=client.invitelink2),
+            ],
+            [
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🔗", url=client.invitelink3),
+                InlineKeyboardButton("🔗 𝙶𝚁𝙾𝚄𝙿𝚂 🔗", url=client.invitelink4), 
+            ],  
+            [
+                InlineKeyboardButton("❌ 𝙲𝙻𝙾𝚂𝙴 ❌", callback_data="close"),
+            ],
+        ]
         await message.reply_text(
             text=START_MSG.format(
                 first=message.from_user.first_name,
@@ -124,7 +140,7 @@ async def start_command(client: Bot, message: Message):
                 mention=message.from_user.mention,
                 id=message.from_user.id,
             ),
-            reply_markup=InlineKeyboardMarkup(out),
+            reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True,
             quote=True,
         )
@@ -132,9 +148,32 @@ async def start_command(client: Bot, message: Message):
     return
 
 
+    
+    
 @Bot.on_message(filters.command("start") & filters.private)
-async def not_joined(client: Bot, message: Message):
-    buttons = fsub_button(client, message)
+async def not_joined(client: Client, message: Message):
+    buttons = [
+        [
+            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🔗", url=client.invitelink), 
+            InlineKeyboardButton("🔗 𝙶𝚁𝙾𝚄𝙿𝚂 🔗", url=client.invitelink2),
+        ],
+        [
+            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🔗", url=client.invitelink3), 
+            InlineKeyboardButton("🔗 𝙶𝚁𝙾𝚄𝙿𝚂 🔗", url=client.invitelink4),
+        ],
+    ]
+    try:
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="• 𝙲𝙾𝙱𝙰 𝙻𝙰𝙶𝙸 •",
+                    url=f"https://t.me/{client.username}?start={message.command[1]}",
+                )
+            ]
+        )
+    except IndexError:
+        pass
+
     await message.reply(
         text=FORCE_MSG.format(
             first=message.from_user.first_name,
@@ -217,7 +256,7 @@ async def ping_pong(client, m: Message):
     m_reply = await m.reply_text("Pinging...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "<b>PONG!!</b>🏓 \n"
+        "<b>PONG !!!</b>🏓 \n"
         f"<b>• Pinger -</b> <code>{delta_ping * 1000:.3f}ms</code>\n"
         f"<b>• Uptime -</b> <code>{uptime}</code>\n"
     )
