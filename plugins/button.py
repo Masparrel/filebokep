@@ -15,7 +15,7 @@ def start_button(client):
             ],
         ]
         return buttons
-    if not FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
+    if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
@@ -26,7 +26,7 @@ def start_button(client):
             ],
         ]
         return buttons
-    if FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and not FORCE_SUB_GROUP:
+    if FORCE_SUB_CHANNEL and not FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
@@ -37,25 +37,14 @@ def start_button(client):
             ],
         ]
         return buttons
-    if FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and not FORCE_SUB_GROUP:
-        buttons = [
-            [
-                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
-            ],
-            [
-                InlineKeyboardButton(text="• ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ •", callback_data="about"),
-                InlineKeyboardButton(text="• ᴛᴜᴛᴜᴘ •", callback_data="close"),
-            ],
-        ]
-        return buttons
-    if FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
+    if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="• ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ •", callback_data="about"),
             ],
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
+                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
             ],
             [InlineKeyboardButton(text="• ᴛᴜᴛᴜᴘ •", callback_data="close")],
@@ -64,7 +53,7 @@ def start_button(client):
 
 
 def fsub_button(client, message):
-    if not FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
+    if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
@@ -82,7 +71,7 @@ def fsub_button(client, message):
         except IndexError:
             pass
         return buttons
-    if not FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
+    if not FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
@@ -100,25 +89,7 @@ def fsub_button(client, message):
         except IndexError:
             pass
         return buttons
-    if FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and not FORCE_SUB_GROUP:
-        buttons = [
-            [
-                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
-            ],
-        ]
-        try:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text="ᴄᴏʙᴀ ʟᴀɢɪ",
-                        url=f"https://t.me/{client.username}?start={message.command[1]}",
-                    )
-                ]
-            )
-        except IndexError:
-            pass
-        return buttons
-    if FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and not FORCE_SUB_GROUP:
+    if FORCE_SUB_CHANNEL and not FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
@@ -136,11 +107,11 @@ def fsub_button(client, message):
         except IndexError:
             pass
         return buttons
-    if FORCE_SUB_CHANNEL FORCE_SUB_CHANNEL2 and FORCE_SUB_GROUP:
+    if FORCE_SUB_CHANNEL and FORCE_SUB_GROUP:
         buttons = [
             [
                 InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
-                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
+                InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
                 InlineKeyboardButton(text="ᴊᴏɪɴ ɢʀᴏᴜᴘ", url=client.invitelink2),
             ],
         ]
