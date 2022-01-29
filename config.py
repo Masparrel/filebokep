@@ -1,5 +1,6 @@
 # (©)Codexbotz
 # Recode by @mrismanaziz
+# Copas by @Cahsemarangasli
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 import logging
