@@ -14,7 +14,6 @@ from config import (
     APP_ID,
     CHANNEL_ID,
     FORCE_SUB_CHANNEL,
-    FORCE_SUB_GROUP,
     FORCE_SUB_CHANNEL1,
     FORCE_SUB_CHANNEL2,
     FORCE_SUB_CHANNEL3,
@@ -109,7 +108,7 @@ class Bot(Client):
         if FORCE_SUB_GROUP:
             try:
                 link = await self.export_chat_invite_link(FORCE_SUB_GROUP)
-                self.invitelink2 = link
+                self.invitelink = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning(
