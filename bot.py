@@ -2,7 +2,7 @@
 # 
 # Recode By @mrismanaziz
 # Featuring @SilenceSpe4ks
-
+# t.me/SharingUserbot X t.me/infobotmusik
 
 import pyromod.listen
 import sys
