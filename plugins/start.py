@@ -123,8 +123,8 @@ async def start_command(client: Client, message: Message):
                 InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 2 🔗", url=client.invitelink2),
             ],
             [
-                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 3 🔗", url=client.invitelink3),
-                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 4 🔗", url=client.invitelink4), 
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 3 🔗", url=client.invitelink),
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 4 🔗", url=client.invitelink),
             ],  
             [
                 InlineKeyboardButton("❌ 𝙲𝙻𝙾𝚂𝙴 ❌", callback_data="close"),
