@@ -1,12 +1,12 @@
 {
-  "name": "File Sharing Man",
+  "name": "File Bokep Parrel",
   "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
   "keywords": [
     "telegram",
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/mrismanaziz/File-Sharing-Man",
+  "repository": "https://github.com/Masparrel/filebokep",
   "logo": "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg",
   "env": {
     "TG_BOT_TOKEN": {
@@ -15,14 +15,14 @@
     },
     "OWNER": {
       "description": "Masukan Username Telegram untuk Owner BOT [ Jangan Pake @ ]",
-      "value": "mrismanaziz"
+      "value": "maspeler"
     },
     "OWNER_ID": {
       "description": "Masukan User ID Telegram untuk Owner BOT",
-      "value": "844432220"
+      "value": "2117674735"
     },
     "ADMINS": {
-      "description": "Masukan User ID untuk mendapatkan hak Admin BOT [Hanya dapat membuat link]",
+      "description": "Masukan User ID untuk mendapatkan hak Admin BOT (Hanya dapat membuat link)",
       "value": "0"
     },
     "APP_ID": {
@@ -34,7 +34,7 @@
       "value": ""
     },
     "CHANNEL_ID": {
-      "description": "Masukan ID Channel Untuk [Channel Database]",
+      "description": "Masukan ID Channel Untuk (Channel Database)",
       "value": "-100"
     },
     "FORCE_SUB_CHANNEL": {
@@ -42,10 +42,6 @@
       "value": "0"
     },
     "FORCE_SUB_CHANNEL1": {
-      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
-      "value": "0"
-    },
-    "FORCE_SUB_CHANNEL2": {
       "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya, Bila tidak ingin dipakai Fsubnya, isi dengan 0",
       "value": "0"
     },
@@ -62,13 +58,13 @@
       "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
     },
     "CHANNEL":{
-      "description": "Masukan Username Channel anda Untuk Wajib Subscribenya [ Jangan Pake @ ]",
-      "value": "Lunatic0de",
+      "description": "Masukan Username Channel anda Untuk Wajib Subscribenya ( Jangan Menggunakan @ )",
+      "value": "anonymoushomech",
       "required": false
     },
     "GROUP":{
-      "description": "Masukan Username dari Group anda Untuk Wajib Subscribenya [ Jangan Pake @ ]",
-      "value": "SharingUserbot",
+      "description": "Masukan Username dari Group anda Untuk Wajib Subscribenya ( Jangan Menggunakan @ )",
+      "value": "anonymoushomee",
       "required": false
     }
   },
