@@ -120,11 +120,14 @@ async def start_command(client: Client, message: Message):
             [InlineKeyboardButton("💬 𝚃𝙴𝙽𝚃𝙰𝙽𝙶 𝚂𝙰𝚈𝙰 💬", callback_data="about")],
             [
                 InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 1 🔗", url=client.invitelink),
-                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 2 🔗", url=client.invitelink2),
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 2 🔗", url=client.invitelink1),
             ],
             [
-                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 3 🔗", url=client.invitelink3),
-                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 4 🔗", url=client.invitelink4),
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 3 🔗", url=client.invitelink2),
+                InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 4 🔗", url=client.invitelink3),
+            ],
+            [
+                InlineKeyboardButton("🔗 𝙶𝚁𝙾𝚄𝙿 🔗", url=client.invitelink4)
             ],  
             [
                 InlineKeyboardButton("❌ 𝙲𝙻𝙾𝚂𝙴 ❌", callback_data="close"),
@@ -155,11 +158,14 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 1 🔗", url=client.invitelink), 
-            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 2 🔗", url=client.invitelink2),
+            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 2 🔗", url=client.invitelink1),
         ],
         [
-            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 3 🔗", url=client.invitelink3), 
-            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 4 🔗", url=client.invitelink4),
+            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 3 🔗", url=client.invitelink2), 
+            InlineKeyboardButton("🔗 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 4 🔗", url=client.invitelink3),
+        ],
+        [
+            InlineKeyboardButton("🔗 𝙶𝚁𝙾𝚄𝙿 🔗", url=client.invitelink4)
         ],
     ]
     try:
